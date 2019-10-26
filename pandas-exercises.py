@@ -1,7 +1,11 @@
 import pandas as pd
-import os
-import os.path
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("-f", "--file", dest="file", help="input data file")
 
-insurance = pd.read_csv(filepath_or_buffer='\Users\zachz\Desktop\insurance.csv', sep=',', header=0)
+args = parser.parse_args()
+file = args.file
+
+insurance = pd.read_csv(filepath_or_buffer=file, sep=',', header=0)
 print(insurance)
