@@ -9,3 +9,5 @@ file = args.file
 
 insurance = pd.read_csv(filepath_or_buffer=file, sep=',', header=0)
 print(insurance)
+
+#we have done it! this prints the data
